@@ -34,6 +34,26 @@ app.get("/books/publisher/:publisher", function(req, res) {
   });
 });
 
+app.post("/books", function(req, res) {
+  Book.create(req.body).then(book => {
+    res.json(req.body);
+  });
+});
+
+app.put("/books/title/:title", function(req, res) {
+  Book.findOneAndUpdate({ title: req.params.title }, req.body, {
+    new: true
+  }).then(book => {
+    res.json(book);
+  });
+});
+
+app.delete("/books/title/:title", function(req, res) {
+  Book.findOneAndDelete({ title: req.params.title }).then(book => {
+    res.json(book);
+  });
+});
+
 app.listen(4000, function() {
   console.log("I am listening at port 4000");
 });
