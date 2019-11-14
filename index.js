@@ -6,7 +6,7 @@ app.use(parser.json());
 
 app.get("/", function(req, res) {
   Book.find({}).then(books => {
-    res.redirect("http://localhost:4000/books");
+    res.redirect("/books");
   });
 });
 
