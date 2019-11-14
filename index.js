@@ -54,6 +54,8 @@ app.delete("/books/title/:title", function(req, res) {
   });
 });
 
-app.listen(4000, function() {
-  console.log("I am listening at port 4000");
+app.set("port", process.env.PORT || 4000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
