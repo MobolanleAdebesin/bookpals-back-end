@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
+var cors = require("cors");
+
 const Book = require("./lib/models/Books.js");
 const parser = require("body-parser");
+
+app.use(cors());
 app.use(parser.json());
 
 app.get("/", function(req, res) {
