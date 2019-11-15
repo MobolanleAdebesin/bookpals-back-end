@@ -29,7 +29,7 @@ Route: https://bola-api.herokuapp.com/books/
 Description: Following this route will return data for the first 20 books on 
 the NY Times Bestseller List. 
 
-Route: https://bola-api.herokuapp.com/books/title/title/insert-book-title-here
+Route: https://bola-api.herokuapp.com/books/title/insert-book-title-here
 Example: https://bola-api.herokuapp.com/books/title/1,000 PLACES TO SEE BEFORE YOU DIE
 Description: In the example above,the route will return data for the book '1000 PLACES TO SEE BEFORE YOU DIE'. 
 Replacing this title with any of the titles of recognized by the database will return information about that specific book. 
