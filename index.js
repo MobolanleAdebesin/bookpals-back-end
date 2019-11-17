@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-var cors = require("cors");
+const cors = require("cors");
 
 const Book = require("./lib/models/Books.js");
 const parser = require("body-parser");
@@ -58,7 +58,7 @@ app.delete("/books/title/:title", function(req, res) {
   });
 });
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 8080);
 
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
