@@ -6,7 +6,8 @@ const Book = require("./lib/models/Books.js");
 const parser = require("body-parser");
 
 app.use(cors());
-app.use(parser.urlencoded({ extended: false }));
+app.use(parser.urlencoded({ extended: true }));
+("");
 app.use(parser.json());
 
 app.get("/", function(req, res) {
