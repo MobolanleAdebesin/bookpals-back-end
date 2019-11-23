@@ -65,7 +65,11 @@ app.delete("/books/author/:author", function(req, res) {
     res.json(book);
   });
 });
-
+app.delete("/books/id/:id", function(req, res) {
+  Book.findOneAndDelete({ _id: req.params.id }).then(book => {
+    res.json(book);
+  });
+});
 app.set("port", process.env.PORT || 8080);
 
 app.listen(app.get("port"), () => {
