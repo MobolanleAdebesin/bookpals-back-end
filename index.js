@@ -54,6 +54,14 @@ app.put("/books/title/:title", function(req, res) {
   });
 });
 
+app.put("/books/id/:id", function(req, res) {
+  Book.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true
+  }).then(book => {
+    res.json(book);
+  });
+});
+
 app.delete("/books/title/:title", function(req, res) {
   Book.findOneAndDelete({ title: req.params.title }).then(book => {
     res.json(book);
