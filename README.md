@@ -58,7 +58,7 @@ The deployed site can be found [here](https://bola-api.herokuapp.com/books/).
 
 # Issues 
 
-If there are any issues or suggestions for ways that I can improve my project please submit them [here](https://github.com/MobolanleAdebesin/json-api-build/new/master)!
+If there are any issues or suggestions for ways that I can improve my project please submit them [here](https://github.com/MobolanleAdebesin/bookpals-back-end/issues)!
 
 
 
